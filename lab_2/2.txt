@@ -1,0 +1,113 @@
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+#include <string>
+
+
+int main()
+{
+	double x, y, a;
+	char str;
+	char z, i, r;
+	std::cout << "Welcome, this programm counts your numbers" << std::endl;
+	do
+	{
+		std::cout << "Which operator do u want to use? (s (switch) / i (if) ): ";
+		std::cin >> i;
+		if (i == 'i')
+		{
+			std::cout << "[IF] Enter number 1" << std::endl;
+			std::cout << "[IF] Number 1 = ";
+			std::cin >> x;
+			std::cout << "[IF] Enter arithemtic sign (+, -, *, /) - ";
+			std::cin >> z;
+			if (z == '+')
+			{
+				std::cout << "[IF] Enter number 2" << std::endl;
+				std::cout << "[IF] Number 2 = ";
+				std::cin >> y;
+				std::cout << "[IF] Answer is " << a << std::endl;
+				a = x + y;
+			}
+			else if (z == '-')
+			{
+				std::cout << "[IF] Enter number 2" << std::endl;
+				std::cout << "[IF] Number 2 = ";
+				std::cin >> y;
+				a = x - y;
+				std::cout << "[IF] Answer is " << a << std::endl;
+			}
+			else if (z == '*')
+			{
+				std::cout << "[IF] Enter number 2" << std::endl;
+				std::cout << "[IF] Number 2 = ";
+				std::cin >> y;
+				a = x * y;
+				std::cout << "[IF] Answer is " << a << std::endl;
+			}
+			else if (z == '/')
+			{
+				std::cout << "[IF] Enter number 2" << std::endl;
+				std::cout << "[IF] Number 2 = ";
+				std::cin >> y;
+				a = x / y;
+				std::cout << "[IF] Answer is " << a << std::endl;
+			}
+			else
+			{
+				std::cout << "[IF] Sign isn't available" << std::endl;
+			}
+		}
+		else if (i == 's')
+		{
+			std::cout << "[SWITCH] Enter number 1" << std::endl;
+			std::cout << "[SWITCH] Number 1 = ";
+			std::cin >> x;
+			std::cout << "[SWITCH] Enter arithemtic sign (+, -, *, /) - ";
+			std::cin >> r;
+			switch (r)
+			{
+			case '+':
+				std::cout << "[SWITCH] Enter number 2" << std::endl;
+				std::cout << "[SWITCH] number 2 = ";
+				std::cin >> y;
+				a = x + y;
+				std::cout << "[SWITCH] Answer is " << a << std::endl;
+				break;
+			case '-':
+				std::cout << "[SWITCH] Enter number 2" << std::endl;
+				std::cout << "[SWITCH] Number 2 = ";
+				std::cin >> y;
+				a = x - y;
+				std::cout << "[SWITCH] Answer is " << a << std::endl;
+				break;
+			case '*':
+				std::cout << "[SWITCH] Enter number 2" << std::endl;
+				std::cout << "[SWITCH] Number 2 = ";
+				std::cin >> y;
+				a = x * y;
+				std::cout << "[SWITCH] Answer is " << a << std::endl;
+				break;
+			case '/':
+				std::cout << "[SWITCH] Enter number 2" << std::endl;
+				std::cout << "[SWITCH] number 2 = ";
+				std::cin >> y;
+				a = x / y;
+				std::cout << "[SWITCH] Answer is " << a << std::endl;
+				break;
+			default:
+				std::cout << "[SWITCH] can't understand" << std::endl;
+			}
+		
+		}
+		else
+		{
+			std::cout << "unknown error" << std::endl;
+		}
+		std::cout << "Do you want to continue y/n" << std::endl;
+		std::cin >> str;
+	} while (str == 'y');
+	system("pause");
+    return 0;
+}
+
