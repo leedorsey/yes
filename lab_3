@@ -1,0 +1,34 @@
+#include "stdafx.h"
+#include <iostream>
+#include <cmath>
+using namespace std;
+double fn1(double z) {
+	double rslt;
+	rslt = pow(z, 3) - 3 * pow(z, 2);
+	return rslt; }
+double fn2(double z) {
+	double rslt;
+	rslt = sin(z);
+	return rslt; }
+double fn3(double z) {
+	double rslt;
+	rslt = exp(2) - exp(-z);
+	return rslt; }
+double fnx(double x) {
+	double rslt;
+	rslt = pow(x, 2) + 8 * x - 6;
+	return rslt; 
+}
+int main() {
+	double z;
+	cout << "Enter z" << endl;
+	cin >> z;
+	cout << "result =";
+	if (z < 0) {
+		cout << fnx(fn1(z)) << endl; }
+	else if (z >= 0 && z <= 8) {
+		cout << fnx(fn2(z)) << endl; }
+	else if (z > 8) {
+		cout << fnx(fn3(z)) << endl; }
+	system("pause");
+	return 0; }
